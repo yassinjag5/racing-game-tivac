@@ -38,25 +38,12 @@ Section Cross References
     spaceinvaders.o(i.AdjustGameSpeed) refers to spaceinvaders.o(.data) for temp
     spaceinvaders.o(i.GPIOPortB_Handler) refers to spaceinvaders.o(.data) for start
     spaceinvaders.o(i.GPIOPortF_Handler) refers to spaceinvaders.o(.data) for start
-    spaceinvaders.o(i.GetTemperature) refers to dflt_clz.o(x$fpl$dflt) for __aeabi_i2d
-    spaceinvaders.o(i.GetTemperature) refers to dmul.o(x$fpl$dmul) for __aeabi_dmul
-    spaceinvaders.o(i.GetTemperature) refers to daddsub_clz.o(x$fpl$drsb) for __aeabi_drsub
-    spaceinvaders.o(i.GetTemperature) refers to spaceinvaders.o(.data) for result
-    spaceinvaders.o(i.Timer2A_Handler) refers to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
-    spaceinvaders.o(i.Timer2A_Handler) refers to _printf_f.o(.ARM.Collect$$_printf_percent$$00000003) for _printf_f
-    spaceinvaders.o(i.Timer2A_Handler) refers to printf1.o(x$fpl$printf1) for _printf_fp_dec
     spaceinvaders.o(i.Timer2A_Handler) refers to nokia5110.o(i.Nokia5110_ClearBuffer) for Nokia5110_ClearBuffer
-    spaceinvaders.o(i.Timer2A_Handler) refers to spaceinvaders.o(i.GetTemperature) for GetTemperature
     spaceinvaders.o(i.Timer2A_Handler) refers to nokia5110.o(i.Nokia5110_PrintBMP) for Nokia5110_PrintBMP
     spaceinvaders.o(i.Timer2A_Handler) refers to rand.o(.emb_text) for rand
     spaceinvaders.o(i.Timer2A_Handler) refers to nokia5110.o(i.Nokia5110_DisplayBuffer) for Nokia5110_DisplayBuffer
-    spaceinvaders.o(i.Timer2A_Handler) refers to nokia5110.o(i.Nokia5110_SetCursor) for Nokia5110_SetCursor
-    spaceinvaders.o(i.Timer2A_Handler) refers to ddiv.o(x$fpl$ddiv) for __aeabi_ddiv
-    spaceinvaders.o(i.Timer2A_Handler) refers to noretval__2sprintf.o(.text) for __2sprintf
-    spaceinvaders.o(i.Timer2A_Handler) refers to nokia5110.o(i.Nokia5110_OutString) for Nokia5110_OutString
     spaceinvaders.o(i.Timer2A_Handler) refers to spaceinvaders.o(.data) for f1
     spaceinvaders.o(i.Timer2A_Handler) refers to spaceinvaders.o(.constdata) for car
-    spaceinvaders.o(i.Timer2A_Handler) refers to spaceinvaders.o(.bss) for buffer
     spaceinvaders.o(i.getPotentiometerReading) refers to dflt_clz.o(x$fpl$dflt) for __aeabi_i2d
     spaceinvaders.o(i.getPotentiometerReading) refers to dmul.o(x$fpl$dmul) for __aeabi_dmul
     spaceinvaders.o(i.getPotentiometerReading) refers to daddsub_clz.o(x$fpl$dsub) for __aeabi_dsub
@@ -67,14 +54,12 @@ Section Cross References
     spaceinvaders.o(i.main) refers to printf1.o(x$fpl$printf1) for _printf_fp_dec
     spaceinvaders.o(i.main) refers to spaceinvaders.o(i.PortB_Init) for PortB_Init
     spaceinvaders.o(i.main) refers to spaceinvaders.o(i.PortF_Init) for PortF_Init
-    spaceinvaders.o(i.main) refers to spaceinvaders.o(i.PortE_Init) for PortE_Init
     spaceinvaders.o(i.main) refers to rand.o(.emb_text) for rand
     spaceinvaders.o(i.main) refers to texas.o(i.TExaS_Init) for TExaS_Init
     spaceinvaders.o(i.main) refers to random.o(.text) for Random_Init
     spaceinvaders.o(i.main) refers to nokia5110.o(i.Nokia5110_Init) for Nokia5110_Init
     spaceinvaders.o(i.main) refers to nokia5110.o(i.Nokia5110_ClearBuffer) for Nokia5110_ClearBuffer
     spaceinvaders.o(i.main) refers to nokia5110.o(i.Nokia5110_DisplayBuffer) for Nokia5110_DisplayBuffer
-    spaceinvaders.o(i.main) refers to spaceinvaders.o(i.ADC0_Init) for ADC0_Init
     spaceinvaders.o(i.main) refers to spaceinvaders.o(i.ADC_Init) for ADC_Init
     spaceinvaders.o(i.main) refers to startup.o(.text) for EnableInterrupts
     spaceinvaders.o(i.main) refers to nokia5110.o(i.Nokia5110_Clear) for Nokia5110_Clear
@@ -330,28 +315,28 @@ Image Symbol Table
     Symbol Name                              Value     Ov Type        Size  Object(Section)
 
     RESET                                    0x00000000   Section      644  startup.o(RESET)
-    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit1.o ABSOLUTE
     ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit2.o ABSOLUTE
     ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit3.o ABSOLUTE
     ../clib/angel/boardlib.s                 0x00000000   Number         0  boardshut.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit1.o ABSOLUTE
     ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_zi.o ABSOLUTE
     ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_copy.o ABSOLUTE
     ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit.o ABSOLUTE
     ../clib/angel/kernel.s                   0x00000000   Number         0  rtentry.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit2.o ABSOLUTE
     ../clib/angel/kernel.s                   0x00000000   Number         0  rtentry4.o ABSOLUTE
     ../clib/angel/kernel.s                   0x00000000   Number         0  rtentry2.o ABSOLUTE
-    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit2.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  rt_raise.o ABSOLUTE
     ../clib/angel/rt.s                       0x00000000   Number         0  rt_locale_intlibspace.o ABSOLUTE
     ../clib/angel/rt.s                       0x00000000   Number         0  rt_locale.o ABSOLUTE
-    ../clib/angel/rt.s                       0x00000000   Number         0  rt_raise.o ABSOLUTE
     ../clib/angel/scatter.s                  0x00000000   Number         0  __scatter.o ABSOLUTE
     ../clib/angel/startup.s                  0x00000000   Number         0  __main.o ABSOLUTE
     ../clib/angel/sys.s                      0x00000000   Number         0  sys_stackheap_outer.o ABSOLUTE
-    ../clib/angel/sys.s                      0x00000000   Number         0  use_no_semi.o ABSOLUTE
     ../clib/angel/sys.s                      0x00000000   Number         0  libspace.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  use_no_semi.o ABSOLUTE
     ../clib/angel/sys.s                      0x00000000   Number         0  indicate_semi.o ABSOLUTE
-    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_command.o ABSOLUTE
     ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_wrch.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_command.o ABSOLUTE
     ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_exit.o ABSOLUTE
     ../clib/armsys.c                         0x00000000   Number         0  _get_argv_nomalloc.o ABSOLUTE
     ../clib/armsys.c                         0x00000000   Number         0  no_argv.o ABSOLUTE
@@ -362,45 +347,45 @@ Image Symbol Table
     ../clib/heapalloc.c                      0x00000000   Number         0  hrguard.o ABSOLUTE
     ../clib/heapaux.c                        0x00000000   Number         0  heapauxi.o ABSOLUTE
     ../clib/libinit.s                        0x00000000   Number         0  libinit.o ABSOLUTE
-    ../clib/libinit.s                        0x00000000   Number         0  libinit2.o ABSOLUTE
     ../clib/libinit.s                        0x00000000   Number         0  libshutdown.o ABSOLUTE
     ../clib/libinit.s                        0x00000000   Number         0  libshutdown2.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libinit2.o ABSOLUTE
     ../clib/locale.s                         0x00000000   Number         0  lc_numeric_c.o ABSOLUTE
     ../clib/longlong.s                       0x00000000   Number         0  lludiv10.o ABSOLUTE
     ../clib/memcpset.s                       0x00000000   Number         0  strcmpv7m.o ABSOLUTE
     ../clib/misc.s                           0x00000000   Number         0  printf_stubs.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  __printf.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_fp_dec.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  _printf_char_common.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  _sputc.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_fp_dec.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  __printf_nopercent.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  _printf_fp_infnan.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  __printf_ss_wp.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  __2sprintf.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  noretval__2sprintf.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_flags_ss.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __2sprintf.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  __printf_flags.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  __printf_ss.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  __printf_flags_ss.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  __printf_wp.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  __printf_flags_wp.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_ss_wp.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  __printf_flags_ss_wp.o ABSOLUTE
-    ../clib/printf_percent.s                 0x00000000   Number         0  _printf_percent.o ABSOLUTE
-    ../clib/printf_percent.s                 0x00000000   Number         0  _printf_f.o ABSOLUTE
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_percent_end.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_general.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  __raise.o ABSOLUTE
+    ../clib/printf_percent.s                 0x00000000   Number         0  _printf_f.o ABSOLUTE
+    ../clib/printf_percent.s                 0x00000000   Number         0  _printf_percent.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_exit.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_stak_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_rtred_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_segv_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_inner.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  __raise.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_abrt_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_other.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_formal.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_outer.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_stak_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_segv_inner.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_pvfn_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_other.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_cppl_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_outer.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_general.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_formal.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtred_inner.o ABSOLUTE
     ../clib/signal.s                         0x00000000   Number         0  defsig.o ABSOLUTE
     ../clib/stdlib.c                         0x00000000   Number         0  rand.o ABSOLUTE
     ../clib/stdlib.c                         0x00000000   Number         0  rand.o ABSOLUTE
@@ -503,72 +488,68 @@ Image Symbol Table
     CL$$btod_ediv                            0x00001182   Section       40  btod.o(CL$$btod_ediv)
     CL$$btod_emul                            0x000011aa   Section       40  btod.o(CL$$btod_emul)
     CL$$btod_mult_common                     0x000011d2   Section      580  btod.o(CL$$btod_mult_common)
-    i.ADC0_Init                              0x00001418   Section        0  spaceinvaders.o(i.ADC0_Init)
-    i.ADC1_In                                0x00001490   Section        0  texas.o(i.ADC1_In)
-    i.ADC1_Init                              0x0000149c   Section        0  texas.o(i.ADC1_Init)
-    i.ADC_Init                               0x00001570   Section        0  spaceinvaders.o(i.ADC_Init)
-    i.AdjustGameSpeed                        0x00001644   Section        0  spaceinvaders.o(i.AdjustGameSpeed)
-    i.GPIOPortB_Handler                      0x000016ac   Section        0  spaceinvaders.o(i.GPIOPortB_Handler)
-    i.GPIOPortF_Handler                      0x0000170c   Section        0  spaceinvaders.o(i.GPIOPortF_Handler)
-    i.GetTemperature                         0x0000173c   Section        0  spaceinvaders.o(i.GetTemperature)
-    i.Nokia5110_Clear                        0x000017c4   Section        0  nokia5110.o(i.Nokia5110_Clear)
-    i.Nokia5110_ClearBuffer                  0x000017e4   Section        0  nokia5110.o(i.Nokia5110_ClearBuffer)
-    i.Nokia5110_DisplayBuffer                0x000017fc   Section        0  nokia5110.o(i.Nokia5110_DisplayBuffer)
-    i.Nokia5110_DrawFullImage                0x0000180c   Section        0  nokia5110.o(i.Nokia5110_DrawFullImage)
-    i.Nokia5110_Init                         0x00001830   Section        0  nokia5110.o(i.Nokia5110_Init)
-    i.Nokia5110_OutChar                      0x0000199c   Section        0  nokia5110.o(i.Nokia5110_OutChar)
-    i.Nokia5110_OutString                    0x000019d4   Section        0  nokia5110.o(i.Nokia5110_OutString)
-    i.Nokia5110_OutUDec                      0x000019ec   Section        0  nokia5110.o(i.Nokia5110_OutUDec)
-    i.Nokia5110_PrintBMP                     0x00001b88   Section        0  nokia5110.o(i.Nokia5110_PrintBMP)
-    i.Nokia5110_SetCursor                    0x00001d30   Section        0  nokia5110.o(i.Nokia5110_SetCursor)
-    i.PLL_Init                               0x00001d60   Section        0  texas.o(i.PLL_Init)
-    i.PortB_Init                             0x00001ddc   Section        0  spaceinvaders.o(i.PortB_Init)
-    i.PortE_Init                             0x00001ee8   Section        0  spaceinvaders.o(i.PortE_Init)
-    i.PortF_Init                             0x00001f34   Section        0  spaceinvaders.o(i.PortF_Init)
-    i.SetCode                                0x00002040   Section        0  texas.o(i.SetCode)
-    i.SetCourse                              0x00002058   Section        0  texas.o(i.SetCourse)
-    i.TExaS_Init                             0x00002070   Section        0  texas.o(i.TExaS_Init)
-    i.Timer2A_Handler                        0x00002234   Section        0  spaceinvaders.o(i.Timer2A_Handler)
-    i.Timer2_Init                            0x000023b4   Section        0  spaceinvaders.o(i.Timer2_Init)
-    i.Timer4A_Handler                        0x0000243c   Section        0  texas.o(i.Timer4A_Handler)
-    i.Timer5A_Handler                        0x0000245c   Section        0  texas.o(i.Timer5A_Handler)
-    i.UART0_Init                             0x0000248c   Section        0  texas.o(i.UART0_Init)
-    i.__ARM_fpclassify                       0x0000254c   Section        0  fpclassify.o(i.__ARM_fpclassify)
-    i._is_digit                              0x00002574   Section        0  __printf_wp.o(i._is_digit)
-    i.getPotentiometerReading                0x00002584   Section        0  spaceinvaders.o(i.getPotentiometerReading)
-    i.lcdwrite                               0x0000261c   Section        0  nokia5110.o(i.lcdwrite)
-    lcdwrite                                 0x0000261d   Thumb Code    66  nokia5110.o(i.lcdwrite)
-    i.main                                   0x00002668   Section        0  spaceinvaders.o(i.main)
-    locale$$code                             0x00002864   Section       44  lc_numeric_c.o(locale$$code)
-    x$fpl$dadd                               0x00002890   Section      336  daddsub_clz.o(x$fpl$dadd)
-    _dadd1                                   0x000028a1   Thumb Code     0  daddsub_clz.o(x$fpl$dadd)
-    x$fpl$ddiv                               0x000029e0   Section      688  ddiv.o(x$fpl$ddiv)
-    ddiv_entry                               0x000029e7   Thumb Code     0  ddiv.o(x$fpl$ddiv)
-    x$fpl$dfix                               0x00002c90   Section       94  dfix.o(x$fpl$dfix)
-    x$fpl$dflt                               0x00002cee   Section       46  dflt_clz.o(x$fpl$dflt)
-    x$fpl$dmul                               0x00002d1c   Section      340  dmul.o(x$fpl$dmul)
-    x$fpl$dnaninf                            0x00002e70   Section      156  dnaninf.o(x$fpl$dnaninf)
-    x$fpl$dretinf                            0x00002f0c   Section       12  dretinf.o(x$fpl$dretinf)
-    x$fpl$drsb                               0x00002f18   Section       22  daddsub_clz.o(x$fpl$drsb)
-    x$fpl$dsub                               0x00002f30   Section      468  daddsub_clz.o(x$fpl$dsub)
-    _dsub1                                   0x00002f41   Thumb Code     0  daddsub_clz.o(x$fpl$dsub)
-    x$fpl$printf1                            0x00003104   Section        4  printf1.o(x$fpl$printf1)
-    .constdata                               0x00003108   Section      480  nokia5110.o(.constdata)
-    x$fpl$usenofp                            0x00003108   Section        0  usenofp.o(x$fpl$usenofp)
-    ASCII                                    0x00003108   Data         480  nokia5110.o(.constdata)
-    .constdata                               0x000032e8   Section      878  spaceinvaders.o(.constdata)
-    ASCII                                    0x000032e8   Data         480  spaceinvaders.o(.constdata)
-    .constdata                               0x00003656   Section      360  texas.o(.constdata)
-    .constdata                               0x000037c0   Section      148  bigflt0.o(.constdata)
-    tenpwrs_x                                0x000037c0   Data          60  bigflt0.o(.constdata)
-    tenpwrs_i                                0x000037fc   Data          64  bigflt0.o(.constdata)
-    locale$$data                             0x00003874   Section       28  lc_numeric_c.o(locale$$data)
-    __lcnum_c_name                           0x00003878   Data           2  lc_numeric_c.o(locale$$data)
-    __lcnum_c_start                          0x00003880   Data           0  lc_numeric_c.o(locale$$data)
-    __lcnum_c_point                          0x0000388c   Data           0  lc_numeric_c.o(locale$$data)
-    __lcnum_c_thousands                      0x0000388e   Data           0  lc_numeric_c.o(locale$$data)
-    __lcnum_c_grouping                       0x0000388f   Data           0  lc_numeric_c.o(locale$$data)
-    __lcnum_c_end                            0x00003890   Data           0  lc_numeric_c.o(locale$$data)
+    i.ADC1_In                                0x00001418   Section        0  texas.o(i.ADC1_In)
+    i.ADC1_Init                              0x00001424   Section        0  texas.o(i.ADC1_Init)
+    i.ADC_Init                               0x000014f8   Section        0  spaceinvaders.o(i.ADC_Init)
+    i.AdjustGameSpeed                        0x000015cc   Section        0  spaceinvaders.o(i.AdjustGameSpeed)
+    i.GPIOPortB_Handler                      0x00001634   Section        0  spaceinvaders.o(i.GPIOPortB_Handler)
+    i.GPIOPortF_Handler                      0x00001694   Section        0  spaceinvaders.o(i.GPIOPortF_Handler)
+    i.Nokia5110_Clear                        0x000016c4   Section        0  nokia5110.o(i.Nokia5110_Clear)
+    i.Nokia5110_ClearBuffer                  0x000016e4   Section        0  nokia5110.o(i.Nokia5110_ClearBuffer)
+    i.Nokia5110_DisplayBuffer                0x000016fc   Section        0  nokia5110.o(i.Nokia5110_DisplayBuffer)
+    i.Nokia5110_DrawFullImage                0x0000170c   Section        0  nokia5110.o(i.Nokia5110_DrawFullImage)
+    i.Nokia5110_Init                         0x00001730   Section        0  nokia5110.o(i.Nokia5110_Init)
+    i.Nokia5110_OutChar                      0x0000189c   Section        0  nokia5110.o(i.Nokia5110_OutChar)
+    i.Nokia5110_OutString                    0x000018d4   Section        0  nokia5110.o(i.Nokia5110_OutString)
+    i.Nokia5110_OutUDec                      0x000018ec   Section        0  nokia5110.o(i.Nokia5110_OutUDec)
+    i.Nokia5110_PrintBMP                     0x00001a88   Section        0  nokia5110.o(i.Nokia5110_PrintBMP)
+    i.Nokia5110_SetCursor                    0x00001c30   Section        0  nokia5110.o(i.Nokia5110_SetCursor)
+    i.PLL_Init                               0x00001c60   Section        0  texas.o(i.PLL_Init)
+    i.PortB_Init                             0x00001cdc   Section        0  spaceinvaders.o(i.PortB_Init)
+    i.PortF_Init                             0x00001de8   Section        0  spaceinvaders.o(i.PortF_Init)
+    i.SetCode                                0x00001ef4   Section        0  texas.o(i.SetCode)
+    i.SetCourse                              0x00001f0c   Section        0  texas.o(i.SetCourse)
+    i.TExaS_Init                             0x00001f24   Section        0  texas.o(i.TExaS_Init)
+    i.Timer2A_Handler                        0x000020e8   Section        0  spaceinvaders.o(i.Timer2A_Handler)
+    i.Timer2_Init                            0x00002228   Section        0  spaceinvaders.o(i.Timer2_Init)
+    i.Timer4A_Handler                        0x000022b0   Section        0  texas.o(i.Timer4A_Handler)
+    i.Timer5A_Handler                        0x000022d0   Section        0  texas.o(i.Timer5A_Handler)
+    i.UART0_Init                             0x00002300   Section        0  texas.o(i.UART0_Init)
+    i.__ARM_fpclassify                       0x000023c0   Section        0  fpclassify.o(i.__ARM_fpclassify)
+    i._is_digit                              0x000023e8   Section        0  __printf_wp.o(i._is_digit)
+    i.getPotentiometerReading                0x000023f8   Section        0  spaceinvaders.o(i.getPotentiometerReading)
+    i.lcdwrite                               0x00002490   Section        0  nokia5110.o(i.lcdwrite)
+    lcdwrite                                 0x00002491   Thumb Code    66  nokia5110.o(i.lcdwrite)
+    i.main                                   0x000024dc   Section        0  spaceinvaders.o(i.main)
+    locale$$code                             0x000026d0   Section       44  lc_numeric_c.o(locale$$code)
+    x$fpl$dadd                               0x000026fc   Section      336  daddsub_clz.o(x$fpl$dadd)
+    _dadd1                                   0x0000270d   Thumb Code     0  daddsub_clz.o(x$fpl$dadd)
+    x$fpl$ddiv                               0x0000284c   Section      688  ddiv.o(x$fpl$ddiv)
+    ddiv_entry                               0x00002853   Thumb Code     0  ddiv.o(x$fpl$ddiv)
+    x$fpl$dfix                               0x00002afc   Section       94  dfix.o(x$fpl$dfix)
+    x$fpl$dflt                               0x00002b5a   Section       46  dflt_clz.o(x$fpl$dflt)
+    x$fpl$dmul                               0x00002b88   Section      340  dmul.o(x$fpl$dmul)
+    x$fpl$dnaninf                            0x00002cdc   Section      156  dnaninf.o(x$fpl$dnaninf)
+    x$fpl$dretinf                            0x00002d78   Section       12  dretinf.o(x$fpl$dretinf)
+    x$fpl$dsub                               0x00002d84   Section      468  daddsub_clz.o(x$fpl$dsub)
+    _dsub1                                   0x00002d95   Thumb Code     0  daddsub_clz.o(x$fpl$dsub)
+    x$fpl$printf1                            0x00002f58   Section        4  printf1.o(x$fpl$printf1)
+    .constdata                               0x00002f5c   Section      480  nokia5110.o(.constdata)
+    x$fpl$usenofp                            0x00002f5c   Section        0  usenofp.o(x$fpl$usenofp)
+    ASCII                                    0x00002f5c   Data         480  nokia5110.o(.constdata)
+    .constdata                               0x0000313c   Section      878  spaceinvaders.o(.constdata)
+    ASCII                                    0x0000313c   Data         480  spaceinvaders.o(.constdata)
+    .constdata                               0x000034aa   Section      360  texas.o(.constdata)
+    .constdata                               0x00003614   Section      148  bigflt0.o(.constdata)
+    tenpwrs_x                                0x00003614   Data          60  bigflt0.o(.constdata)
+    tenpwrs_i                                0x00003650   Data          64  bigflt0.o(.constdata)
+    locale$$data                             0x000036c8   Section       28  lc_numeric_c.o(locale$$data)
+    __lcnum_c_name                           0x000036cc   Data           2  lc_numeric_c.o(locale$$data)
+    __lcnum_c_start                          0x000036d4   Data           0  lc_numeric_c.o(locale$$data)
+    __lcnum_c_point                          0x000036e0   Data           0  lc_numeric_c.o(locale$$data)
+    __lcnum_c_thousands                      0x000036e2   Data           0  lc_numeric_c.o(locale$$data)
+    __lcnum_c_grouping                       0x000036e3   Data           0  lc_numeric_c.o(locale$$data)
+    __lcnum_c_end                            0x000036e4   Data           0  lc_numeric_c.o(locale$$data)
     .data                                    0x20000000   Section      124  spaceinvaders.o(.data)
     .data                                    0x2000007c   Section       52  texas.o(.data)
     DATA                                     0x200000b0   Section        4  random.o(DATA)
@@ -834,72 +815,67 @@ Image Symbol Table
     _btod_ediv                               0x00001183   Thumb Code    40  btod.o(CL$$btod_ediv)
     _btod_emul                               0x000011ab   Thumb Code    40  btod.o(CL$$btod_emul)
     __btod_mult_common                       0x000011d3   Thumb Code   580  btod.o(CL$$btod_mult_common)
-    ADC0_Init                                0x00001419   Thumb Code   100  spaceinvaders.o(i.ADC0_Init)
-    ADC1_In                                  0x00001491   Thumb Code     6  texas.o(i.ADC1_In)
-    ADC1_Init                                0x0000149d   Thumb Code   174  texas.o(i.ADC1_Init)
-    ADC_Init                                 0x00001571   Thumb Code   174  spaceinvaders.o(i.ADC_Init)
-    AdjustGameSpeed                          0x00001645   Thumb Code    78  spaceinvaders.o(i.AdjustGameSpeed)
-    GPIOPortB_Handler                        0x000016ad   Thumb Code    78  spaceinvaders.o(i.GPIOPortB_Handler)
-    GPIOPortF_Handler                        0x0000170d   Thumb Code    40  spaceinvaders.o(i.GPIOPortF_Handler)
-    GetTemperature                           0x0000173d   Thumb Code   100  spaceinvaders.o(i.GetTemperature)
-    Nokia5110_Clear                          0x000017c5   Thumb Code    32  nokia5110.o(i.Nokia5110_Clear)
-    Nokia5110_ClearBuffer                    0x000017e5   Thumb Code    20  nokia5110.o(i.Nokia5110_ClearBuffer)
-    Nokia5110_DisplayBuffer                  0x000017fd   Thumb Code    10  nokia5110.o(i.Nokia5110_DisplayBuffer)
-    Nokia5110_DrawFullImage                  0x0000180d   Thumb Code    34  nokia5110.o(i.Nokia5110_DrawFullImage)
-    Nokia5110_Init                           0x00001831   Thumb Code   316  nokia5110.o(i.Nokia5110_Init)
-    Nokia5110_OutChar                        0x0000199d   Thumb Code    52  nokia5110.o(i.Nokia5110_OutChar)
-    Nokia5110_OutString                      0x000019d5   Thumb Code    22  nokia5110.o(i.Nokia5110_OutString)
-    Nokia5110_OutUDec                        0x000019ed   Thumb Code   394  nokia5110.o(i.Nokia5110_OutUDec)
-    Nokia5110_PrintBMP                       0x00001b89   Thumb Code   420  nokia5110.o(i.Nokia5110_PrintBMP)
-    Nokia5110_SetCursor                      0x00001d31   Thumb Code    48  nokia5110.o(i.Nokia5110_SetCursor)
-    PLL_Init                                 0x00001d61   Thumb Code   118  texas.o(i.PLL_Init)
-    PortB_Init                               0x00001ddd   Thumb Code   222  spaceinvaders.o(i.PortB_Init)
-    PortE_Init                               0x00001ee9   Thumb Code    62  spaceinvaders.o(i.PortE_Init)
-    PortF_Init                               0x00001f35   Thumb Code   220  spaceinvaders.o(i.PortF_Init)
-    SetCode                                  0x00002041   Thumb Code    20  texas.o(i.SetCode)
-    SetCourse                                0x00002059   Thumb Code    20  texas.o(i.SetCourse)
-    TExaS_Init                               0x00002071   Thumb Code   324  texas.o(i.TExaS_Init)
-    Timer2A_Handler                          0x00002235   Thumb Code   312  spaceinvaders.o(i.Timer2A_Handler)
-    Timer2_Init                              0x000023b5   Thumb Code   118  spaceinvaders.o(i.Timer2_Init)
-    Timer4A_Handler                          0x0000243d   Thumb Code    20  texas.o(i.Timer4A_Handler)
-    Timer5A_Handler                          0x0000245d   Thumb Code    34  texas.o(i.Timer5A_Handler)
-    UART0_Init                               0x0000248d   Thumb Code   160  texas.o(i.UART0_Init)
-    __ARM_fpclassify                         0x0000254d   Thumb Code    40  fpclassify.o(i.__ARM_fpclassify)
-    _is_digit                                0x00002575   Thumb Code    14  __printf_wp.o(i._is_digit)
-    getPotentiometerReading                  0x00002585   Thumb Code   110  spaceinvaders.o(i.getPotentiometerReading)
-    main                                     0x00002669   Thumb Code   362  spaceinvaders.o(i.main)
-    _get_lc_numeric                          0x00002865   Thumb Code    44  lc_numeric_c.o(locale$$code)
-    __aeabi_dadd                             0x00002891   Thumb Code     0  daddsub_clz.o(x$fpl$dadd)
-    _dadd                                    0x00002891   Thumb Code   332  daddsub_clz.o(x$fpl$dadd)
-    __aeabi_ddiv                             0x000029e1   Thumb Code     0  ddiv.o(x$fpl$ddiv)
-    _ddiv                                    0x000029e1   Thumb Code   552  ddiv.o(x$fpl$ddiv)
-    __aeabi_d2iz                             0x00002c91   Thumb Code     0  dfix.o(x$fpl$dfix)
-    _dfix                                    0x00002c91   Thumb Code    94  dfix.o(x$fpl$dfix)
-    __aeabi_i2d                              0x00002cef   Thumb Code     0  dflt_clz.o(x$fpl$dflt)
-    _dflt                                    0x00002cef   Thumb Code    46  dflt_clz.o(x$fpl$dflt)
-    __aeabi_dmul                             0x00002d1d   Thumb Code     0  dmul.o(x$fpl$dmul)
-    _dmul                                    0x00002d1d   Thumb Code   332  dmul.o(x$fpl$dmul)
-    __fpl_dnaninf                            0x00002e71   Thumb Code   156  dnaninf.o(x$fpl$dnaninf)
-    __fpl_dretinf                            0x00002f0d   Thumb Code    12  dretinf.o(x$fpl$dretinf)
-    __aeabi_drsub                            0x00002f19   Thumb Code     0  daddsub_clz.o(x$fpl$drsb)
-    _drsb                                    0x00002f19   Thumb Code    22  daddsub_clz.o(x$fpl$drsb)
-    __aeabi_dsub                             0x00002f31   Thumb Code     0  daddsub_clz.o(x$fpl$dsub)
-    _dsub                                    0x00002f31   Thumb Code   464  daddsub_clz.o(x$fpl$dsub)
-    _printf_fp_dec                           0x00003105   Thumb Code     4  printf1.o(x$fpl$printf1)
-    __I$use$fp                               0x00003108   Number         0  usenofp.o(x$fpl$usenofp)
-    car                                      0x000034c8   Data         199  spaceinvaders.o(.constdata)
-    enemy                                    0x0000358f   Data         199  spaceinvaders.o(.constdata)
-    NoInputMsg                               0x00003656   Data          40  texas.o(.constdata)
-    OutputPortMsg0                           0x0000367e   Data          40  texas.o(.constdata)
-    OutputPortMsg1                           0x000036a6   Data          40  texas.o(.constdata)
-    OutputPortMsg2                           0x000036ce   Data          40  texas.o(.constdata)
-    OutputPortMsg3                           0x000036f6   Data          40  texas.o(.constdata)
-    BlankMsg                                 0x0000371e   Data          40  texas.o(.constdata)
-    InitializedMsg                           0x00003746   Data          40  texas.o(.constdata)
-    IntroMsg                                 0x0000376e   Data          40  texas.o(.constdata)
-    DoneMsg                                  0x00003796   Data          40  texas.o(.constdata)
-    Region$$Table$$Base                      0x00003854   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x00003874   Number         0  anon$$obj.o(Region$$Table)
+    ADC1_In                                  0x00001419   Thumb Code     6  texas.o(i.ADC1_In)
+    ADC1_Init                                0x00001425   Thumb Code   174  texas.o(i.ADC1_Init)
+    ADC_Init                                 0x000014f9   Thumb Code   174  spaceinvaders.o(i.ADC_Init)
+    AdjustGameSpeed                          0x000015cd   Thumb Code    78  spaceinvaders.o(i.AdjustGameSpeed)
+    GPIOPortB_Handler                        0x00001635   Thumb Code    78  spaceinvaders.o(i.GPIOPortB_Handler)
+    GPIOPortF_Handler                        0x00001695   Thumb Code    40  spaceinvaders.o(i.GPIOPortF_Handler)
+    Nokia5110_Clear                          0x000016c5   Thumb Code    32  nokia5110.o(i.Nokia5110_Clear)
+    Nokia5110_ClearBuffer                    0x000016e5   Thumb Code    20  nokia5110.o(i.Nokia5110_ClearBuffer)
+    Nokia5110_DisplayBuffer                  0x000016fd   Thumb Code    10  nokia5110.o(i.Nokia5110_DisplayBuffer)
+    Nokia5110_DrawFullImage                  0x0000170d   Thumb Code    34  nokia5110.o(i.Nokia5110_DrawFullImage)
+    Nokia5110_Init                           0x00001731   Thumb Code   316  nokia5110.o(i.Nokia5110_Init)
+    Nokia5110_OutChar                        0x0000189d   Thumb Code    52  nokia5110.o(i.Nokia5110_OutChar)
+    Nokia5110_OutString                      0x000018d5   Thumb Code    22  nokia5110.o(i.Nokia5110_OutString)
+    Nokia5110_OutUDec                        0x000018ed   Thumb Code   394  nokia5110.o(i.Nokia5110_OutUDec)
+    Nokia5110_PrintBMP                       0x00001a89   Thumb Code   420  nokia5110.o(i.Nokia5110_PrintBMP)
+    Nokia5110_SetCursor                      0x00001c31   Thumb Code    48  nokia5110.o(i.Nokia5110_SetCursor)
+    PLL_Init                                 0x00001c61   Thumb Code   118  texas.o(i.PLL_Init)
+    PortB_Init                               0x00001cdd   Thumb Code   222  spaceinvaders.o(i.PortB_Init)
+    PortF_Init                               0x00001de9   Thumb Code   220  spaceinvaders.o(i.PortF_Init)
+    SetCode                                  0x00001ef5   Thumb Code    20  texas.o(i.SetCode)
+    SetCourse                                0x00001f0d   Thumb Code    20  texas.o(i.SetCourse)
+    TExaS_Init                               0x00001f25   Thumb Code   324  texas.o(i.TExaS_Init)
+    Timer2A_Handler                          0x000020e9   Thumb Code   266  spaceinvaders.o(i.Timer2A_Handler)
+    Timer2_Init                              0x00002229   Thumb Code   118  spaceinvaders.o(i.Timer2_Init)
+    Timer4A_Handler                          0x000022b1   Thumb Code    20  texas.o(i.Timer4A_Handler)
+    Timer5A_Handler                          0x000022d1   Thumb Code    34  texas.o(i.Timer5A_Handler)
+    UART0_Init                               0x00002301   Thumb Code   160  texas.o(i.UART0_Init)
+    __ARM_fpclassify                         0x000023c1   Thumb Code    40  fpclassify.o(i.__ARM_fpclassify)
+    _is_digit                                0x000023e9   Thumb Code    14  __printf_wp.o(i._is_digit)
+    getPotentiometerReading                  0x000023f9   Thumb Code   110  spaceinvaders.o(i.getPotentiometerReading)
+    main                                     0x000024dd   Thumb Code   354  spaceinvaders.o(i.main)
+    _get_lc_numeric                          0x000026d1   Thumb Code    44  lc_numeric_c.o(locale$$code)
+    __aeabi_dadd                             0x000026fd   Thumb Code     0  daddsub_clz.o(x$fpl$dadd)
+    _dadd                                    0x000026fd   Thumb Code   332  daddsub_clz.o(x$fpl$dadd)
+    __aeabi_ddiv                             0x0000284d   Thumb Code     0  ddiv.o(x$fpl$ddiv)
+    _ddiv                                    0x0000284d   Thumb Code   552  ddiv.o(x$fpl$ddiv)
+    __aeabi_d2iz                             0x00002afd   Thumb Code     0  dfix.o(x$fpl$dfix)
+    _dfix                                    0x00002afd   Thumb Code    94  dfix.o(x$fpl$dfix)
+    __aeabi_i2d                              0x00002b5b   Thumb Code     0  dflt_clz.o(x$fpl$dflt)
+    _dflt                                    0x00002b5b   Thumb Code    46  dflt_clz.o(x$fpl$dflt)
+    __aeabi_dmul                             0x00002b89   Thumb Code     0  dmul.o(x$fpl$dmul)
+    _dmul                                    0x00002b89   Thumb Code   332  dmul.o(x$fpl$dmul)
+    __fpl_dnaninf                            0x00002cdd   Thumb Code   156  dnaninf.o(x$fpl$dnaninf)
+    __fpl_dretinf                            0x00002d79   Thumb Code    12  dretinf.o(x$fpl$dretinf)
+    __aeabi_dsub                             0x00002d85   Thumb Code     0  daddsub_clz.o(x$fpl$dsub)
+    _dsub                                    0x00002d85   Thumb Code   464  daddsub_clz.o(x$fpl$dsub)
+    _printf_fp_dec                           0x00002f59   Thumb Code     4  printf1.o(x$fpl$printf1)
+    __I$use$fp                               0x00002f5c   Number         0  usenofp.o(x$fpl$usenofp)
+    car                                      0x0000331c   Data         199  spaceinvaders.o(.constdata)
+    enemy                                    0x000033e3   Data         199  spaceinvaders.o(.constdata)
+    NoInputMsg                               0x000034aa   Data          40  texas.o(.constdata)
+    OutputPortMsg0                           0x000034d2   Data          40  texas.o(.constdata)
+    OutputPortMsg1                           0x000034fa   Data          40  texas.o(.constdata)
+    OutputPortMsg2                           0x00003522   Data          40  texas.o(.constdata)
+    OutputPortMsg3                           0x0000354a   Data          40  texas.o(.constdata)
+    BlankMsg                                 0x00003572   Data          40  texas.o(.constdata)
+    InitializedMsg                           0x0000359a   Data          40  texas.o(.constdata)
+    IntroMsg                                 0x000035c2   Data          40  texas.o(.constdata)
+    DoneMsg                                  0x000035ea   Data          40  texas.o(.constdata)
+    Region$$Table$$Base                      0x000036a8   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x000036c8   Number         0  anon$$obj.o(Region$$Table)
     currentTemperature                       0x20000000   Data           8  spaceinvaders.o(.data)
     range                                    0x20000008   Data           4  spaceinvaders.o(.data)
     tempRange                                0x2000000c   Data           4  spaceinvaders.o(.data)
@@ -953,165 +929,160 @@ Memory Map of the image
 
   Image Entry point : 0x0000026d
 
-  Load Region LR_1 (Base: 0x00000000, Size: 0x00003944, Max: 0xffffffff, ABSOLUTE)
+  Load Region LR_1 (Base: 0x00000000, Size: 0x00003798, Max: 0xffffffff, ABSOLUTE)
 
-    Execution Region ER_RO (Base: 0x00000000, Size: 0x00003890, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RO (Base: 0x00000000, Size: 0x000036e4, Max: 0xffffffff, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x00000000   0x00000284   Code   RO            3  * RESET               startup.o
-    0x00000284   0x00000008   Code   RO          360  * !!!main             c_w.l(__main.o)
-    0x0000028c   0x00000034   Code   RO          595    !!!scatter          c_w.l(__scatter.o)
-    0x000002c0   0x0000001a   Code   RO          597    !!handler_copy      c_w.l(__scatter_copy.o)
+    0x00000284   0x00000008   Code   RO          342  * !!!main             c_w.l(__main.o)
+    0x0000028c   0x00000034   Code   RO          577    !!!scatter          c_w.l(__scatter.o)
+    0x000002c0   0x0000001a   Code   RO          579    !!handler_copy      c_w.l(__scatter_copy.o)
     0x000002da   0x00000002   PAD
-    0x000002dc   0x0000001c   Code   RO          599    !!handler_zi        c_w.l(__scatter_zi.o)
-    0x000002f8   0x00000000   Code   RO          352    .ARM.Collect$$_printf_percent$$00000000  c_w.l(_printf_percent.o)
-    0x000002f8   0x00000006   Code   RO          351    .ARM.Collect$$_printf_percent$$00000003  c_w.l(_printf_f.o)
-    0x000002fe   0x00000004   Code   RO          393    .ARM.Collect$$_printf_percent$$00000017  c_w.l(_printf_percent_end.o)
-    0x00000302   0x00000002   Code   RO          522    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
-    0x00000304   0x00000000   Code   RO          395    .ARM.Collect$$libinit$$00000002  c_w.l(libinit2.o)
-    0x00000304   0x00000000   Code   RO          398    .ARM.Collect$$libinit$$00000008  c_w.l(libinit2.o)
-    0x00000304   0x00000000   Code   RO          400    .ARM.Collect$$libinit$$0000000A  c_w.l(libinit2.o)
-    0x00000304   0x00000004   Code   RO          401    .ARM.Collect$$libinit$$0000000B  c_w.l(libinit2.o)
-    0x00000308   0x00000000   Code   RO          402    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
-    0x00000308   0x00000006   Code   RO          403    .ARM.Collect$$libinit$$0000000D  c_w.l(libinit2.o)
-    0x0000030e   0x00000000   Code   RO          405    .ARM.Collect$$libinit$$0000000F  c_w.l(libinit2.o)
-    0x0000030e   0x00000000   Code   RO          407    .ARM.Collect$$libinit$$00000011  c_w.l(libinit2.o)
-    0x0000030e   0x00000000   Code   RO          409    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
-    0x0000030e   0x0000000a   Code   RO          410    .ARM.Collect$$libinit$$00000014  c_w.l(libinit2.o)
-    0x00000318   0x00000000   Code   RO          411    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
-    0x00000318   0x00000000   Code   RO          413    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
-    0x00000318   0x00000000   Code   RO          415    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
-    0x00000318   0x00000000   Code   RO          417    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
-    0x00000318   0x00000000   Code   RO          419    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
-    0x00000318   0x00000000   Code   RO          421    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
-    0x00000318   0x00000000   Code   RO          423    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
-    0x00000318   0x00000000   Code   RO          425    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
-    0x00000318   0x00000000   Code   RO          429    .ARM.Collect$$libinit$$0000002A  c_w.l(libinit2.o)
-    0x00000318   0x00000000   Code   RO          431    .ARM.Collect$$libinit$$0000002C  c_w.l(libinit2.o)
-    0x00000318   0x00000000   Code   RO          433    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
-    0x00000318   0x00000000   Code   RO          435    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
-    0x00000318   0x00000002   Code   RO          436    .ARM.Collect$$libinit$$00000031  c_w.l(libinit2.o)
-    0x0000031a   0x00000002   Code   RO          557    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
-    0x0000031c   0x00000000   Code   RO          564    .ARM.Collect$$libshutdown$$00000003  c_w.l(libshutdown2.o)
-    0x0000031c   0x00000000   Code   RO          567    .ARM.Collect$$libshutdown$$00000006  c_w.l(libshutdown2.o)
-    0x0000031c   0x00000000   Code   RO          570    .ARM.Collect$$libshutdown$$00000009  c_w.l(libshutdown2.o)
-    0x0000031c   0x00000000   Code   RO          572    .ARM.Collect$$libshutdown$$0000000B  c_w.l(libshutdown2.o)
-    0x0000031c   0x00000000   Code   RO          575    .ARM.Collect$$libshutdown$$0000000E  c_w.l(libshutdown2.o)
-    0x0000031c   0x00000002   Code   RO          576    .ARM.Collect$$libshutdown$$0000000F  c_w.l(libshutdown2.o)
-    0x0000031e   0x00000000   Code   RO          386    .ARM.Collect$$rtentry$$00000000  c_w.l(rtentry.o)
-    0x0000031e   0x00000000   Code   RO          443    .ARM.Collect$$rtentry$$00000002  c_w.l(rtentry2.o)
-    0x0000031e   0x00000006   Code   RO          455    .ARM.Collect$$rtentry$$00000004  c_w.l(rtentry4.o)
-    0x00000324   0x00000000   Code   RO          445    .ARM.Collect$$rtentry$$00000009  c_w.l(rtentry2.o)
-    0x00000324   0x00000004   Code   RO          446    .ARM.Collect$$rtentry$$0000000A  c_w.l(rtentry2.o)
-    0x00000328   0x00000000   Code   RO          448    .ARM.Collect$$rtentry$$0000000C  c_w.l(rtentry2.o)
-    0x00000328   0x00000008   Code   RO          449    .ARM.Collect$$rtentry$$0000000D  c_w.l(rtentry2.o)
-    0x00000330   0x00000002   Code   RO          525    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
-    0x00000332   0x00000000   Code   RO          537    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
-    0x00000332   0x00000004   Code   RO          538    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
-    0x00000336   0x00000006   Code   RO          539    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
-    0x0000033c   0x00000034   Code   RO          353    .emb_text           c_w.l(rand.o)
+    0x000002dc   0x0000001c   Code   RO          581    !!handler_zi        c_w.l(__scatter_zi.o)
+    0x000002f8   0x00000000   Code   RO          334    .ARM.Collect$$_printf_percent$$00000000  c_w.l(_printf_percent.o)
+    0x000002f8   0x00000006   Code   RO          333    .ARM.Collect$$_printf_percent$$00000003  c_w.l(_printf_f.o)
+    0x000002fe   0x00000004   Code   RO          375    .ARM.Collect$$_printf_percent$$00000017  c_w.l(_printf_percent_end.o)
+    0x00000302   0x00000002   Code   RO          504    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
+    0x00000304   0x00000000   Code   RO          377    .ARM.Collect$$libinit$$00000002  c_w.l(libinit2.o)
+    0x00000304   0x00000000   Code   RO          380    .ARM.Collect$$libinit$$00000008  c_w.l(libinit2.o)
+    0x00000304   0x00000000   Code   RO          382    .ARM.Collect$$libinit$$0000000A  c_w.l(libinit2.o)
+    0x00000304   0x00000004   Code   RO          383    .ARM.Collect$$libinit$$0000000B  c_w.l(libinit2.o)
+    0x00000308   0x00000000   Code   RO          384    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
+    0x00000308   0x00000006   Code   RO          385    .ARM.Collect$$libinit$$0000000D  c_w.l(libinit2.o)
+    0x0000030e   0x00000000   Code   RO          387    .ARM.Collect$$libinit$$0000000F  c_w.l(libinit2.o)
+    0x0000030e   0x00000000   Code   RO          389    .ARM.Collect$$libinit$$00000011  c_w.l(libinit2.o)
+    0x0000030e   0x00000000   Code   RO          391    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
+    0x0000030e   0x0000000a   Code   RO          392    .ARM.Collect$$libinit$$00000014  c_w.l(libinit2.o)
+    0x00000318   0x00000000   Code   RO          393    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
+    0x00000318   0x00000000   Code   RO          395    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
+    0x00000318   0x00000000   Code   RO          397    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
+    0x00000318   0x00000000   Code   RO          399    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
+    0x00000318   0x00000000   Code   RO          401    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
+    0x00000318   0x00000000   Code   RO          403    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
+    0x00000318   0x00000000   Code   RO          405    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
+    0x00000318   0x00000000   Code   RO          407    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
+    0x00000318   0x00000000   Code   RO          411    .ARM.Collect$$libinit$$0000002A  c_w.l(libinit2.o)
+    0x00000318   0x00000000   Code   RO          413    .ARM.Collect$$libinit$$0000002C  c_w.l(libinit2.o)
+    0x00000318   0x00000000   Code   RO          415    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
+    0x00000318   0x00000000   Code   RO          417    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
+    0x00000318   0x00000002   Code   RO          418    .ARM.Collect$$libinit$$00000031  c_w.l(libinit2.o)
+    0x0000031a   0x00000002   Code   RO          539    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
+    0x0000031c   0x00000000   Code   RO          546    .ARM.Collect$$libshutdown$$00000003  c_w.l(libshutdown2.o)
+    0x0000031c   0x00000000   Code   RO          549    .ARM.Collect$$libshutdown$$00000006  c_w.l(libshutdown2.o)
+    0x0000031c   0x00000000   Code   RO          552    .ARM.Collect$$libshutdown$$00000009  c_w.l(libshutdown2.o)
+    0x0000031c   0x00000000   Code   RO          554    .ARM.Collect$$libshutdown$$0000000B  c_w.l(libshutdown2.o)
+    0x0000031c   0x00000000   Code   RO          557    .ARM.Collect$$libshutdown$$0000000E  c_w.l(libshutdown2.o)
+    0x0000031c   0x00000002   Code   RO          558    .ARM.Collect$$libshutdown$$0000000F  c_w.l(libshutdown2.o)
+    0x0000031e   0x00000000   Code   RO          368    .ARM.Collect$$rtentry$$00000000  c_w.l(rtentry.o)
+    0x0000031e   0x00000000   Code   RO          425    .ARM.Collect$$rtentry$$00000002  c_w.l(rtentry2.o)
+    0x0000031e   0x00000006   Code   RO          437    .ARM.Collect$$rtentry$$00000004  c_w.l(rtentry4.o)
+    0x00000324   0x00000000   Code   RO          427    .ARM.Collect$$rtentry$$00000009  c_w.l(rtentry2.o)
+    0x00000324   0x00000004   Code   RO          428    .ARM.Collect$$rtentry$$0000000A  c_w.l(rtentry2.o)
+    0x00000328   0x00000000   Code   RO          430    .ARM.Collect$$rtentry$$0000000C  c_w.l(rtentry2.o)
+    0x00000328   0x00000008   Code   RO          431    .ARM.Collect$$rtentry$$0000000D  c_w.l(rtentry2.o)
+    0x00000330   0x00000002   Code   RO          507    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
+    0x00000332   0x00000000   Code   RO          519    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
+    0x00000332   0x00000004   Code   RO          520    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
+    0x00000336   0x00000006   Code   RO          521    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
+    0x0000033c   0x00000034   Code   RO          335    .emb_text           c_w.l(rand.o)
     0x00000370   0x00000030   Code   RO            4    .text               startup.o
     0x000003a0   0x00000040   Code   RO           92    .text               random.o
-    0x000003e0   0x00000028   Code   RO          327    .text               c_w.l(noretval__2sprintf.o)
-    0x00000408   0x0000010e   Code   RO          339    .text               c_w.l(__printf_wp.o)
+    0x000003e0   0x00000028   Code   RO          309    .text               c_w.l(noretval__2sprintf.o)
+    0x00000408   0x0000010e   Code   RO          321    .text               c_w.l(__printf_wp.o)
     0x00000516   0x00000002   PAD
-    0x00000518   0x0000003c   Code   RO          354    .text               c_w.l(rand.o)
-    0x00000554   0x00000006   Code   RO          358    .text               c_w.l(heapauxi.o)
-    0x0000055a   0x00000420   Code   RO          387    .text               c_w.l(_printf_fp_dec.o)
+    0x00000518   0x0000003c   Code   RO          336    .text               c_w.l(rand.o)
+    0x00000554   0x00000006   Code   RO          340    .text               c_w.l(heapauxi.o)
+    0x0000055a   0x00000420   Code   RO          369    .text               c_w.l(_printf_fp_dec.o)
     0x0000097a   0x00000002   PAD
-    0x0000097c   0x00000030   Code   RO          389    .text               c_w.l(_printf_char_common.o)
-    0x000009ac   0x0000000a   Code   RO          391    .text               c_w.l(_sputc.o)
+    0x0000097c   0x00000030   Code   RO          371    .text               c_w.l(_printf_char_common.o)
+    0x000009ac   0x0000000a   Code   RO          373    .text               c_w.l(_sputc.o)
     0x000009b6   0x00000002   PAD
-    0x000009b8   0x00000008   Code   RO          460    .text               c_w.l(rt_locale_intlibspace.o)
-    0x000009c0   0x0000008a   Code   RO          462    .text               c_w.l(lludiv10.o)
+    0x000009b8   0x00000008   Code   RO          442    .text               c_w.l(rt_locale_intlibspace.o)
+    0x000009c0   0x0000008a   Code   RO          444    .text               c_w.l(lludiv10.o)
     0x00000a4a   0x00000002   PAD
-    0x00000a4c   0x00000080   Code   RO          464    .text               c_w.l(_printf_fp_infnan.o)
-    0x00000acc   0x000000e4   Code   RO          468    .text               c_w.l(bigflt0.o)
-    0x00000bb0   0x00000008   Code   RO          504    .text               c_w.l(libspace.o)
-    0x00000bb8   0x0000004a   Code   RO          507    .text               c_w.l(sys_stackheap_outer.o)
-    0x00000c02   0x0000000c   Code   RO          509    .text               c_w.l(exit.o)
+    0x00000a4c   0x00000080   Code   RO          446    .text               c_w.l(_printf_fp_infnan.o)
+    0x00000acc   0x000000e4   Code   RO          450    .text               c_w.l(bigflt0.o)
+    0x00000bb0   0x00000008   Code   RO          486    .text               c_w.l(libspace.o)
+    0x00000bb8   0x0000004a   Code   RO          489    .text               c_w.l(sys_stackheap_outer.o)
+    0x00000c02   0x0000000c   Code   RO          491    .text               c_w.l(exit.o)
     0x00000c0e   0x00000002   PAD
-    0x00000c10   0x00000080   Code   RO          511    .text               c_w.l(strcmpv7m.o)
-    0x00000c90   0x00000002   Code   RO          533    .text               c_w.l(use_no_semi.o)
-    0x00000c92   0x00000000   Code   RO          535    .text               c_w.l(indicate_semi.o)
+    0x00000c10   0x00000080   Code   RO          493    .text               c_w.l(strcmpv7m.o)
+    0x00000c90   0x00000002   Code   RO          515    .text               c_w.l(use_no_semi.o)
+    0x00000c92   0x00000000   Code   RO          517    .text               c_w.l(indicate_semi.o)
     0x00000c92   0x00000002   PAD
-    0x00000c94   0x0000000c   Code   RO          549    .text               c_w.l(sys_exit.o)
-    0x00000ca0   0x0000003e   Code   RO          471    CL$$btod_d2e        c_w.l(btod.o)
-    0x00000cde   0x00000046   Code   RO          473    CL$$btod_d2e_denorm_low  c_w.l(btod.o)
-    0x00000d24   0x00000060   Code   RO          472    CL$$btod_d2e_norm_op1  c_w.l(btod.o)
-    0x00000d84   0x00000338   Code   RO          481    CL$$btod_div_common  c_w.l(btod.o)
-    0x000010bc   0x000000c6   Code   RO          478    CL$$btod_e2e        c_w.l(btod.o)
-    0x00001182   0x00000028   Code   RO          475    CL$$btod_ediv       c_w.l(btod.o)
-    0x000011aa   0x00000028   Code   RO          474    CL$$btod_emul       c_w.l(btod.o)
-    0x000011d2   0x00000244   Code   RO          480    CL$$btod_mult_common  c_w.l(btod.o)
+    0x00000c94   0x0000000c   Code   RO          531    .text               c_w.l(sys_exit.o)
+    0x00000ca0   0x0000003e   Code   RO          453    CL$$btod_d2e        c_w.l(btod.o)
+    0x00000cde   0x00000046   Code   RO          455    CL$$btod_d2e_denorm_low  c_w.l(btod.o)
+    0x00000d24   0x00000060   Code   RO          454    CL$$btod_d2e_norm_op1  c_w.l(btod.o)
+    0x00000d84   0x00000338   Code   RO          463    CL$$btod_div_common  c_w.l(btod.o)
+    0x000010bc   0x000000c6   Code   RO          460    CL$$btod_e2e        c_w.l(btod.o)
+    0x00001182   0x00000028   Code   RO          457    CL$$btod_ediv       c_w.l(btod.o)
+    0x000011aa   0x00000028   Code   RO          456    CL$$btod_emul       c_w.l(btod.o)
+    0x000011d2   0x00000244   Code   RO          462    CL$$btod_mult_common  c_w.l(btod.o)
     0x00001416   0x00000002   PAD
-    0x00001418   0x00000078   Code   RO           95    i.ADC0_Init         spaceinvaders.o
-    0x00001490   0x0000000c   Code   RO          204    i.ADC1_In           texas.o
-    0x0000149c   0x000000d4   Code   RO          205    i.ADC1_Init         texas.o
-    0x00001570   0x000000d4   Code   RO           96    i.ADC_Init          spaceinvaders.o
-    0x00001644   0x00000068   Code   RO           97    i.AdjustGameSpeed   spaceinvaders.o
-    0x000016ac   0x00000060   Code   RO           99    i.GPIOPortB_Handler  spaceinvaders.o
-    0x0000170c   0x00000030   Code   RO          100    i.GPIOPortF_Handler  spaceinvaders.o
-    0x0000173c   0x00000088   Code   RO          101    i.GetTemperature    spaceinvaders.o
-    0x000017c4   0x00000020   Code   RO           12    i.Nokia5110_Clear   nokia5110.o
-    0x000017e4   0x00000018   Code   RO           13    i.Nokia5110_ClearBuffer  nokia5110.o
-    0x000017fc   0x00000010   Code   RO           14    i.Nokia5110_DisplayBuffer  nokia5110.o
-    0x0000180c   0x00000022   Code   RO           15    i.Nokia5110_DrawFullImage  nokia5110.o
-    0x0000182e   0x00000002   PAD
-    0x00001830   0x0000016c   Code   RO           16    i.Nokia5110_Init    nokia5110.o
-    0x0000199c   0x00000038   Code   RO           17    i.Nokia5110_OutChar  nokia5110.o
-    0x000019d4   0x00000016   Code   RO           18    i.Nokia5110_OutString  nokia5110.o
-    0x000019ea   0x00000002   PAD
-    0x000019ec   0x0000019c   Code   RO           19    i.Nokia5110_OutUDec  nokia5110.o
-    0x00001b88   0x000001a8   Code   RO           20    i.Nokia5110_PrintBMP  nokia5110.o
-    0x00001d30   0x00000030   Code   RO           21    i.Nokia5110_SetCursor  nokia5110.o
-    0x00001d60   0x0000007c   Code   RO          206    i.PLL_Init          texas.o
-    0x00001ddc   0x0000010c   Code   RO          102    i.PortB_Init        spaceinvaders.o
-    0x00001ee8   0x0000004c   Code   RO          103    i.PortE_Init        spaceinvaders.o
-    0x00001f34   0x0000010c   Code   RO          104    i.PortF_Init        spaceinvaders.o
-    0x00002040   0x00000018   Code   RO          207    i.SetCode           texas.o
-    0x00002058   0x00000018   Code   RO          208    i.SetCourse         texas.o
-    0x00002070   0x000001c4   Code   RO          212    i.TExaS_Init        texas.o
-    0x00002234   0x00000180   Code   RO          105    i.Timer2A_Handler   spaceinvaders.o
-    0x000023b4   0x00000088   Code   RO          106    i.Timer2_Init       spaceinvaders.o
-    0x0000243c   0x00000020   Code   RO          214    i.Timer4A_Handler   texas.o
-    0x0000245c   0x00000030   Code   RO          215    i.Timer5A_Handler   texas.o
-    0x0000248c   0x000000c0   Code   RO          218    i.UART0_Init        texas.o
-    0x0000254c   0x00000028   Code   RO          502    i.__ARM_fpclassify  m_ws.l(fpclassify.o)
-    0x00002574   0x0000000e   Code   RO          341    i._is_digit         c_w.l(__printf_wp.o)
-    0x00002582   0x00000002   PAD
-    0x00002584   0x00000098   Code   RO          107    i.getPotentiometerReading  spaceinvaders.o
-    0x0000261c   0x0000004c   Code   RO           22    i.lcdwrite          nokia5110.o
-    0x00002668   0x000001fc   Code   RO          108    i.main              spaceinvaders.o
-    0x00002864   0x0000002c   Code   RO          494    locale$$code        c_w.l(lc_numeric_c.o)
-    0x00002890   0x00000150   Code   RO          362    x$fpl$dadd          fz_ws.l(daddsub_clz.o)
-    0x000029e0   0x000002b0   Code   RO          369    x$fpl$ddiv          fz_ws.l(ddiv.o)
-    0x00002c90   0x0000005e   Code   RO          372    x$fpl$dfix          fz_ws.l(dfix.o)
-    0x00002cee   0x0000002e   Code   RO          377    x$fpl$dflt          fz_ws.l(dflt_clz.o)
-    0x00002d1c   0x00000154   Code   RO          382    x$fpl$dmul          fz_ws.l(dmul.o)
-    0x00002e70   0x0000009c   Code   RO          437    x$fpl$dnaninf       fz_ws.l(dnaninf.o)
-    0x00002f0c   0x0000000c   Code   RO          439    x$fpl$dretinf       fz_ws.l(dretinf.o)
-    0x00002f18   0x00000016   Code   RO          363    x$fpl$drsb          fz_ws.l(daddsub_clz.o)
-    0x00002f2e   0x00000002   PAD
-    0x00002f30   0x000001d4   Code   RO          364    x$fpl$dsub          fz_ws.l(daddsub_clz.o)
-    0x00003104   0x00000004   Code   RO          384    x$fpl$printf1       fz_ws.l(printf1.o)
-    0x00003108   0x00000000   Code   RO          441    x$fpl$usenofp       fz_ws.l(usenofp.o)
-    0x00003108   0x000001e0   Data   RO           24    .constdata          nokia5110.o
-    0x000032e8   0x0000036e   Data   RO          110    .constdata          spaceinvaders.o
-    0x00003656   0x00000168   Data   RO          223    .constdata          texas.o
-    0x000037be   0x00000002   PAD
-    0x000037c0   0x00000094   Data   RO          469    .constdata          c_w.l(bigflt0.o)
-    0x00003854   0x00000020   Data   RO          593    Region$$Table       anon$$obj.o
-    0x00003874   0x0000001c   Data   RO          493    locale$$data        c_w.l(lc_numeric_c.o)
+    0x00001418   0x0000000c   Code   RO          186    i.ADC1_In           texas.o
+    0x00001424   0x000000d4   Code   RO          187    i.ADC1_Init         texas.o
+    0x000014f8   0x000000d4   Code   RO           95    i.ADC_Init          spaceinvaders.o
+    0x000015cc   0x00000068   Code   RO           96    i.AdjustGameSpeed   spaceinvaders.o
+    0x00001634   0x00000060   Code   RO           98    i.GPIOPortB_Handler  spaceinvaders.o
+    0x00001694   0x00000030   Code   RO           99    i.GPIOPortF_Handler  spaceinvaders.o
+    0x000016c4   0x00000020   Code   RO           12    i.Nokia5110_Clear   nokia5110.o
+    0x000016e4   0x00000018   Code   RO           13    i.Nokia5110_ClearBuffer  nokia5110.o
+    0x000016fc   0x00000010   Code   RO           14    i.Nokia5110_DisplayBuffer  nokia5110.o
+    0x0000170c   0x00000022   Code   RO           15    i.Nokia5110_DrawFullImage  nokia5110.o
+    0x0000172e   0x00000002   PAD
+    0x00001730   0x0000016c   Code   RO           16    i.Nokia5110_Init    nokia5110.o
+    0x0000189c   0x00000038   Code   RO           17    i.Nokia5110_OutChar  nokia5110.o
+    0x000018d4   0x00000016   Code   RO           18    i.Nokia5110_OutString  nokia5110.o
+    0x000018ea   0x00000002   PAD
+    0x000018ec   0x0000019c   Code   RO           19    i.Nokia5110_OutUDec  nokia5110.o
+    0x00001a88   0x000001a8   Code   RO           20    i.Nokia5110_PrintBMP  nokia5110.o
+    0x00001c30   0x00000030   Code   RO           21    i.Nokia5110_SetCursor  nokia5110.o
+    0x00001c60   0x0000007c   Code   RO          188    i.PLL_Init          texas.o
+    0x00001cdc   0x0000010c   Code   RO          100    i.PortB_Init        spaceinvaders.o
+    0x00001de8   0x0000010c   Code   RO          101    i.PortF_Init        spaceinvaders.o
+    0x00001ef4   0x00000018   Code   RO          189    i.SetCode           texas.o
+    0x00001f0c   0x00000018   Code   RO          190    i.SetCourse         texas.o
+    0x00001f24   0x000001c4   Code   RO          194    i.TExaS_Init        texas.o
+    0x000020e8   0x00000140   Code   RO          102    i.Timer2A_Handler   spaceinvaders.o
+    0x00002228   0x00000088   Code   RO          103    i.Timer2_Init       spaceinvaders.o
+    0x000022b0   0x00000020   Code   RO          196    i.Timer4A_Handler   texas.o
+    0x000022d0   0x00000030   Code   RO          197    i.Timer5A_Handler   texas.o
+    0x00002300   0x000000c0   Code   RO          200    i.UART0_Init        texas.o
+    0x000023c0   0x00000028   Code   RO          484    i.__ARM_fpclassify  m_ws.l(fpclassify.o)
+    0x000023e8   0x0000000e   Code   RO          323    i._is_digit         c_w.l(__printf_wp.o)
+    0x000023f6   0x00000002   PAD
+    0x000023f8   0x00000098   Code   RO          104    i.getPotentiometerReading  spaceinvaders.o
+    0x00002490   0x0000004c   Code   RO           22    i.lcdwrite          nokia5110.o
+    0x000024dc   0x000001f4   Code   RO          105    i.main              spaceinvaders.o
+    0x000026d0   0x0000002c   Code   RO          476    locale$$code        c_w.l(lc_numeric_c.o)
+    0x000026fc   0x00000150   Code   RO          344    x$fpl$dadd          fz_ws.l(daddsub_clz.o)
+    0x0000284c   0x000002b0   Code   RO          351    x$fpl$ddiv          fz_ws.l(ddiv.o)
+    0x00002afc   0x0000005e   Code   RO          354    x$fpl$dfix          fz_ws.l(dfix.o)
+    0x00002b5a   0x0000002e   Code   RO          359    x$fpl$dflt          fz_ws.l(dflt_clz.o)
+    0x00002b88   0x00000154   Code   RO          364    x$fpl$dmul          fz_ws.l(dmul.o)
+    0x00002cdc   0x0000009c   Code   RO          419    x$fpl$dnaninf       fz_ws.l(dnaninf.o)
+    0x00002d78   0x0000000c   Code   RO          421    x$fpl$dretinf       fz_ws.l(dretinf.o)
+    0x00002d84   0x000001d4   Code   RO          346    x$fpl$dsub          fz_ws.l(daddsub_clz.o)
+    0x00002f58   0x00000004   Code   RO          366    x$fpl$printf1       fz_ws.l(printf1.o)
+    0x00002f5c   0x00000000   Code   RO          423    x$fpl$usenofp       fz_ws.l(usenofp.o)
+    0x00002f5c   0x000001e0   Data   RO           24    .constdata          nokia5110.o
+    0x0000313c   0x0000036e   Data   RO          107    .constdata          spaceinvaders.o
+    0x000034aa   0x00000168   Data   RO          205    .constdata          texas.o
+    0x00003612   0x00000002   PAD
+    0x00003614   0x00000094   Data   RO          451    .constdata          c_w.l(bigflt0.o)
+    0x000036a8   0x00000020   Data   RO          575    Region$$Table       anon$$obj.o
+    0x000036c8   0x0000001c   Data   RO          475    locale$$data        c_w.l(lc_numeric_c.o)
 
 
     Execution Region ER_RW (Base: 0x20000000, Size: 0x000000b4, Max: 0xffffffff, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x0000007c   Data   RW          111    .data               spaceinvaders.o
-    0x2000007c   0x00000034   Data   RW          224    .data               texas.o
+    0x20000000   0x0000007c   Data   RW          108    .data               spaceinvaders.o
+    0x2000007c   0x00000034   Data   RW          206    .data               texas.o
     0x200000b0   0x00000004   Data   RW           91    DATA                random.o
 
 
@@ -1120,10 +1091,10 @@ Memory Map of the image
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x200000b4   0x000001f8   Zero   RW           23    .bss                nokia5110.o
-    0x200002ac   0x00000014   Zero   RW          109    .bss                spaceinvaders.o
-    0x200002c0   0x00000038   Zero   RW          222    .bss                texas.o
-    0x200002f8   0x000000e4   Zero   RW          355    .bss                c_w.l(rand.o)
-    0x200003dc   0x00000060   Zero   RW          505    .bss                c_w.l(libspace.o)
+    0x200002ac   0x00000014   Zero   RW          106    .bss                spaceinvaders.o
+    0x200002c0   0x00000038   Zero   RW          204    .bss                texas.o
+    0x200002f8   0x000000e4   Zero   RW          337    .bss                c_w.l(rand.o)
+    0x200003dc   0x00000060   Zero   RW          487    .bss                c_w.l(libspace.o)
     0x2000043c   0x00000004   PAD
     0x20000440   0x00000000   Zero   RW            2    HEAP                startup.o
     0x20000440   0x00000400   Zero   RW            1    STACK               startup.o
@@ -1137,13 +1108,13 @@ Image component sizes
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
       1508         94        480          0        504       8925   nokia5110.o
-        64         14          0          4          0        184   random.o
-      2508        532        878        124         20       7712   spaceinvaders.o
-       692        632          0          0       1024        868   startup.o
+        64         14          0          4          0        172   random.o
+      2104        444        878        124         20       6446   spaceinvaders.o
+       692        632          0          0       1024        844   startup.o
       1120        244        360         52         56      15276   texas.o
 
     ----------------------------------------------------------------------
-      5896       1516       1752        180       1604      32965   Object Totals
+      5492       1428       1752        180       1604      31663   Object Totals
          0          0         32          0          0          0   (incl. Generated)
          4          0          2          0          0          0   (incl. Padding)
 
@@ -1187,7 +1158,7 @@ Image component sizes
         12          4          0          0          0         68   sys_exit.o
         74          0          0          0          0         80   sys_stackheap_outer.o
          2          0          0          0          0         68   use_no_semi.o
-       826         16          0          0          0        348   daddsub_clz.o
+       804         16          0          0          0        272   daddsub_clz.o
        688        140          0          0          0        208   ddiv.o
         94          4          0          0          0         92   dfix.o
         46          0          0          0          0         68   dflt_clz.o
@@ -1199,19 +1170,19 @@ Image component sizes
         40          0          0          0          0         68   fpclassify.o
 
     ----------------------------------------------------------------------
-      6656        386        176          0        328       3616   Library Totals
-        20          0          0          0          4          0   (incl. Padding)
+      6632        386        176          0        328       3540   Library Totals
+        18          0          0          0          4          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
 
       4430        210        176          0        324       2500   c_w.l
-      2166        176          0          0          0       1048   fz_ws.l
+      2144        176          0          0          0        972   fz_ws.l
         40          0          0          0          0         68   m_ws.l
 
     ----------------------------------------------------------------------
-      6656        386        176          0        328       3616   Library Totals
+      6632        386        176          0        328       3540   Library Totals
 
     ----------------------------------------------------------------------
 
@@ -1220,15 +1191,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     12552       1902       1928        180       1932      32993   Grand Totals
-     12552       1902       1928        180       1932      32993   ELF Image Totals
-     12552       1902       1928        180          0          0   ROM Totals
+     12124       1814       1928        180       1932      31823   Grand Totals
+     12124       1814       1928        180       1932      31823   ELF Image Totals
+     12124       1814       1928        180          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                14480 (  14.14kB)
+    Total RO  Size (Code + RO Data)                14052 (  13.72kB)
     Total RW  Size (RW Data + ZI Data)              2112 (   2.06kB)
-    Total ROM Size (Code + RO Data + RW Data)      14660 (  14.32kB)
+    Total ROM Size (Code + RO Data + RW Data)      14232 (  13.90kB)
 
 ==============================================================================
 
