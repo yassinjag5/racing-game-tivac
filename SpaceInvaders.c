@@ -14,6 +14,7 @@ double volt  ;
 double Temp ; 
 // Function to adjust game speed based on temperature
 void AdjustGameSpeed(void);
+void lol(void) ; 
 // Variable to store the current temperature
 volatile double currentTemperature = 0;
 volatile unsigned int range = 0 ; 
@@ -88,6 +89,7 @@ char buffer[20];
 int main(void) {
   PortB_Init();
   PortF_Init();
+   PortE_Init(); // Initialize Port E
 
   playery = 28; // Mid-screen y = 28
   enemyMove = 84 - enemyW;
@@ -100,6 +102,7 @@ int main(void) {
   Nokia5110_Init();
   Nokia5110_ClearBuffer();
   Nokia5110_DisplayBuffer(); // Draw buffer
+	ADC0_Init();  // Initialize ADC0 
 	ADC_Init();
 
   EnableInterrupts(); // Enable global interrupts
@@ -171,7 +174,43 @@ void AdjustGameSpeed(void) {
 
 }
 
+// Temperature sensor initialization
+void PortE_Init(void) {
+    volatile unsigned long delay;
+    SYSCTL_RCGCGPIO_R |= 1 << 4;  // Enable clock for Port E
+    delay = SYSCTL_RCGCGPIO_R;    // Allow time for the clock to stabilize
 
+    GPIO_PORTE_AFSEL_R |= 1 << 3; // Enable alternate function on PE3
+    GPIO_PORTE_DEN_R &= ~(1 << 3); // Disable digital I/O on PE3
+    GPIO_PORTE_AMSEL_R |= 1 << 3; // Enable analog function on PE3
+}
+
+void ADC0_Init(void) {
+	    volatile unsigned long delay;
+
+	SYSCTL_RCGC0_R |=(1 << 16); //ADC0 clock
+	while ((SYSCTL_RCGC0_R &0x00010000)== 0); //ADC0 clock to settle
+	SYSCTL_RCGC0_R &=~(1<<8 | 1<< 9); 
+    delay = SYSCTL_RCGCADC_R;     // Allow time for the clock to stabilize
+
+    ADC0_ACTSS_R &= ~ ( 1 << 3 );           // Disable sample sequencer 3
+    ADC0_EMUX_R &= ~( 1 << 12 | 1 << 13 | 1 << 14 | 1 << 15);       // Software trigger conversion
+    ADC0_SSMUX3_R = 0;            // Get input from channel 0
+    ADC0_SSCTL3_R = ( 1 << 1 | 1 << 2);          // Set flag and end after one sample
+    ADC0_ACTSS_R |= ( 1 << 3);            // Enable sample sequencer 3
+}
+
+void GetTemperature(void) {
+  ADC0_PSSI_R = 8; // Start conversion
+  while ((ADC0_RIS_R & 8) == 0); // Wait for conversion to complete
+  result = ADC0_SSFIFO3_R; // Read ADC result
+  ADC0_ISC_R = 8; // Clear completion flag
+   volt = ((3.3/4096)*result);
+	 Temp = 147.5 - (75.0 * volt);
+	currentTemperature =  Temp ; // Convert to temperature
+}
+
+// Read temperature sensor value
 int getPotentiometerReading(void) {
   ADC1_PSSI_R = 8; // Start conversion
   while ((ADC1_RIS_R & 8) == 0); // Wait for conversion to complete
@@ -318,6 +357,7 @@ void Timer2A_Handler(void){
 // contains what in the while loop 
 	TIMER2_ICR_R |= 1 << 0 ; // acknowledge the timer2 timeout 
 		Nokia5110_ClearBuffer();
+		GetTemperature() ;
     // ***************** Car Movement **************** //
     if (f1 && (playery > 11)) {  // Move up
       playery -= 17;
@@ -351,7 +391,9 @@ void Timer2A_Handler(void){
 
     // ***************** Screen Display **************** //
     Nokia5110_DisplayBuffer();
-	
+		Nokia5110_SetCursor(1, 1);
+		sprintf(buffer, " %.2f", currentTemperature/10);
+		Nokia5110_OutString(buffer);
 }
 
 void Delay100ms(unsigned long count) {
