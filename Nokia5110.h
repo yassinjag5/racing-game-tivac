@@ -58,8 +58,8 @@
 #define MAX_X                   84
 #define MAX_Y                   48
 // *************************** Screen dimensions ***************************
-#define SCREENW     84
-#define SCREENH     48
+#define SCREENW     84    //screen width**
+#define SCREENH     48		//screen height**
 
 // Contrast value 0xB1 looks good on red SparkFun
 // and 0xB8 looks good on blue Nokia 5110.
@@ -68,7 +68,7 @@
 
 // This table contains the hex values that represent pixels
 // for a font that is 5 pixels wide and 8 pixels high
-static const char ASCII[][5] = {
+static const char ASCII[][5] = {				//who to print a char **
   {0x00, 0x00, 0x00, 0x00, 0x00} // 20
   ,{0x00, 0x00, 0x5f, 0x00, 0x00} // 21 !
   ,{0x00, 0x07, 0x00, 0x07, 0x00} // 22 "
@@ -179,7 +179,7 @@ static const char ASCII[][5] = {
 // inputs: none
 // outputs: none
 // assumes: system clock rate of 50 MHz or less
-void Nokia5110_Init(void);
+void Nokia5110_Init(void);				//**
 
 //********Nokia5110_OutChar*****************
 // Print a character to the Nokia 5110 48x84 LCD.  The
@@ -193,7 +193,7 @@ void Nokia5110_Init(void);
 // inputs: data  character to print
 // outputs: none
 // assumes: LCD is in default horizontal addressing mode (V = 0)
-void Nokia5110_OutChar(unsigned char data);
+void Nokia5110_OutChar(unsigned char data);				//print char**
 
 //********Nokia5110_OutString*****************
 // Print a string of characters to the Nokia 5110 48x84 LCD.
@@ -202,7 +202,7 @@ void Nokia5110_OutChar(unsigned char data);
 // inputs: ptr  pointer to NULL-terminated ASCII string
 // outputs: none
 // assumes: LCD is in default horizontal addressing mode (V = 0)
-void Nokia5110_OutString(char *ptr);
+void Nokia5110_OutString(char *ptr);		//print string**
 
 //********Nokia5110_OutUDec*****************
 // Output a 16-bit number in unsigned decimal format with a
@@ -210,7 +210,7 @@ void Nokia5110_OutString(char *ptr);
 // Inputs: n  16-bit unsigned number
 // Outputs: none
 // assumes: LCD is in default horizontal addressing mode (V = 0)
-void Nokia5110_OutUDec(unsigned short n);
+void Nokia5110_OutUDec(unsigned short n);				//print usigned decimal**
 
 //********Nokia5110_SetCursor*****************
 // Move the cursor to the desired X- and Y-position.  The
@@ -219,14 +219,14 @@ void Nokia5110_OutUDec(unsigned short n);
 // inputs: newX  new X-position of the cursor (0<=newX<=11)
 //         newY  new Y-position of the cursor (0<=newY<=5)
 // outputs: none
-void Nokia5110_SetCursor(unsigned char newX, unsigned char newY);
+void Nokia5110_SetCursor(unsigned char newX, unsigned char newY);				//x,y where we want the curser**
 
 //********Nokia5110_Clear*****************
 // Clear the LCD by writing zeros to the entire screen and
 // reset the cursor to (0,0) (top left corner of screen).
 // inputs: none
 // outputs: none
-void Nokia5110_Clear(void);
+void Nokia5110_Clear(void);				//**
 
 //********Nokia5110_DrawFullImage*****************
 // Fill the whole screen by drawing a 48x84 bitmap image.

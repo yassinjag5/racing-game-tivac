@@ -104,6 +104,8 @@ int main(void) {
   Nokia5110_DisplayBuffer(); // Draw buffer
 	ADC0_Init();  // Initialize ADC0 
 	ADC_Init();
+	
+	GetTemperature();
 
   EnableInterrupts(); // Enable global interrupts
 
@@ -111,15 +113,20 @@ int main(void) {
   Nokia5110_Clear();
   Nokia5110_SetCursor(3, 0);
   Nokia5110_OutString("A M Y");
-  Nokia5110_SetCursor(1, 2);
+	
+			Nokia5110_SetCursor(1, 1);
+		sprintf(buffer, " %.2f", currentTemperature/10);
+		Nokia5110_OutString(buffer);
+  
+	Nokia5110_SetCursor(1, 2);
   Nokia5110_OutString("Racing Car");
   Nokia5110_SetCursor(0, 4);
   Nokia5110_OutString("For Playing");
   Nokia5110_SetCursor(1, 5);
   Nokia5110_OutString("Press SW1");
 
-  GPIO_PORTB_DATA_R &= ~(1 << 5);  // Turn off PB0 (Game Start LED)
-  GPIO_PORTB_DATA_R |= (1 << 4);   // Turn on PB1 (Game Over LED)
+  GPIO_PORTB_DATA_R &= ~(1 << 5);  // Turn off PB4 (Game Start LED)
+  GPIO_PORTB_DATA_R |= (1 << 4);   // Turn on PB5 (Game Over LED)
 
   while (start == 0) {
     // Wait for SW1 to be pressed (handled by interrupt)
@@ -138,8 +145,8 @@ int main(void) {
   
 
   // ***************** Game Over Screen **************** //
-  GPIO_PORTB_DATA_R &= ~(1 << 4);  // Turn off PB0 (Game Start LED)
-  GPIO_PORTB_DATA_R |= (1 << 5);   // Turn on PB1 (Game Over LED)
+  GPIO_PORTB_DATA_R &= ~(1 << 4);  // Turn off PB4 (Game Start LED)
+  GPIO_PORTB_DATA_R |= (1 << 5);   // Turn on PB5 (Game Over LED)
 
   Nokia5110_Clear();
 	Nokia5110_ClearBuffer() ;
@@ -194,12 +201,13 @@ void ADC0_Init(void) {
     delay = SYSCTL_RCGCADC_R;     // Allow time for the clock to stabilize
 
     ADC0_ACTSS_R &= ~ ( 1 << 3 );           // Disable sample sequencer 3
-    ADC0_EMUX_R &= ~( 1 << 12 | 1 << 13 | 1 << 14 | 1 << 15);       // Software trigger conversion
+    ADC0_EMUX_R &= ~( 1 << 12 | 1 << 13 | 1 << 14 | 1 << 15);       // continous sampling
     ADC0_SSMUX3_R = 0;            // Get input from channel 0
     ADC0_SSCTL3_R = ( 1 << 1 | 1 << 2);          // Set flag and end after one sample
     ADC0_ACTSS_R |= ( 1 << 3);            // Enable sample sequencer 3
 }
 
+// Read temperature sensor value
 void GetTemperature(void) {
   ADC0_PSSI_R = 8; // Start conversion
   while ((ADC0_RIS_R & 8) == 0); // Wait for conversion to complete
@@ -210,7 +218,7 @@ void GetTemperature(void) {
 	currentTemperature =  Temp ; // Convert to temperature
 }
 
-// Read temperature sensor value
+
 int getPotentiometerReading(void) {
   ADC1_PSSI_R = 8; // Start conversion
   while ((ADC1_RIS_R & 8) == 0); // Wait for conversion to complete
@@ -391,9 +399,7 @@ void Timer2A_Handler(void){
 
     // ***************** Screen Display **************** //
     Nokia5110_DisplayBuffer();
-		Nokia5110_SetCursor(1, 1);
-		sprintf(buffer, " %.2f", currentTemperature/10);
-		Nokia5110_OutString(buffer);
+
 }
 
 void Delay100ms(unsigned long count) {

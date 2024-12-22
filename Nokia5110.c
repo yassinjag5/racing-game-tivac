@@ -387,7 +387,7 @@ void Nokia5110_PrintBMP(unsigned char xpos, unsigned char ypos, const unsigned c
 // There is a buffer in RAM that holds one screen
 // This routine clears this buffer
 void Nokia5110_ClearBuffer(void){int i;
-  for(i=0; i<SCREENW*SCREENH/8; i=i+1){
+    for(i=0; i<SCREENW*SCREENH/8; i=i+1){
     Screen[i] = 0;              // clear buffer
   }
 }
